@@ -6,81 +6,197 @@
     <link rel="stylesheet" href="https://use.typekit.net/nve5mgy.css" />
     <title>Main menu</title>
     <style>
-      
-      div {
-        position: absolute;
-        top: 3%;
-        left: 0;
-        right: 0;
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+
+        margin: 0px;
+      }
+
+      header {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 80px;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      .sidebar-left {
+        background-color: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        width: 200px;
+        left: 0px;
+        top: 0px;
+        height: 100vh;
         display: flex;
         flex-direction: column;
+        justify-content: end;
+        padding: 1vw;
+        z-index: 50;
+      }
+
+      .sidebar-right {
+        background-color: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        width: 200px;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        padding: 1vw;
+        z-index: 50;
+      }
+
+      .content {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        padding-top: 80px;
+        padding-left: 200px;
+        padding-right: 200px;
+        min-height: 100vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        background-image: url("images/Classroom.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .content > section {
+        background-color: rgba(255, 255, 255, 0.9);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2vw;
+        min-height: 350px;
+        border: 2px solid black;
+      }
+
+      .content > section:not(:last-child) {
+        border-bottom: 2px solid #000;
+      }
+
+      .image-container {
+        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
       }
-      header {
-        font-size: 3vw;
-        color: black;
-        text-align: left;
-        font-family: "Crayonize", sans-serif;
-        margin-bottom: 0;
+
+      .image-caption {
+        position: absolute;
+        left: 0px;
+        margin-left: -50px;
+        width: 150px;
+        transform: rotate(-90deg);
+        text-align: center;
+        text-transform: uppercase;
       }
-      .main-container{
+
+      .menu-image {
+        width: 200px;
+        height: auto;
+      }
+
+      .links {
         display: flex;
         flex-direction: column;
-      }
-
-      .flex-container{
-        display:flex
-      }
-    
-      h2 {
-        font-size: 2.5vw;
-        color: rgb(0, 0, 0);
-        text-align: left;
-        font-family: "Crayonize", sans-serif;
-        margin-top: 5%;
-      }
-      p {
-        color: rgb(0, 0, 0);
-        font-size: 3vw;
-        text-align: center;
-        font-family: "Crayonize", sans-serif;
-      }
-      a {
-        color: inherit;
-      }
-
-      img {
-        width: 50vw;
-        height: auto;
-        margin-top: 5;
-      }
-
-      .smallimages {
-        width: 2vw;
-        height: 2vw;
-        margin-top: .25w;
-        padding-left: 1vw;
-
+        justify-content: space-evenly;
+        align-items: center;
       }
     </style>
   </head>
   <body>
-    <body>
-        <div>
-            <header>Hi <br />Lefty :)</header>
-          </div>
-          <h2>
-            <a href="index-copy.html">Back to the classroom</a>
-            <img class="smallimages" src="images/apple.png" alt="apple" />
-          </h2>
-      <h2>
-          <a href="about.html">about</a> 
-          <img class="smallimages" src="images/chalkboard.png" alt="apple" />
-        </h2>     
-        
-    <p>
-      
-    </p>
+    <header>Hi Lefty</header>
+    <div class="sidebar-left">
+      <a href="index.html">Back to classroom </a>
+    </div>
+    <div class="sidebar-right">
+      <a href="about.html">About</a>
+    </div>
+    <main class="content">
+      <section>
+        <div class="image-container">
+          <p class="image-caption">Famous lefties</p>
+          <img class="menu-image" src="images/glasses.png" alt="glasses" />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Link 1</a>
+          <a href="http://google.com">Link 2</a>
+          <a href="http://google.com">Link 3</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="image-container">
+          <p class="image-caption">Gadgets</p>
+          <img
+            class="menu-image"
+            src="images/computer.png"
+            alt="computer mouse"
+          />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Link 1</a>
+          <a href="http://google.com">Link 2</a>
+          <a href="http://google.com">Link 3</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="image-container">
+          <p class="image-caption">Hobbies & crafts</p>
+          <img
+            class="menu-image"
+            src="images/knittandkneedle.png"
+            alt="knitting and needle"
+          />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Link 1</a>
+          <a href="http://google.com">Link 2</a>
+          <a href="http://google.com">Link 3</a>
+        </div>
+      </section>
+
+      <section id="guitar">
+        <div class="image-container">
+          <p class="image-caption">Musical instruments</p>
+          <img class="menu-image" src="images/guitar.png" alt="guitar" />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Link 1</a>
+          <a href="http://google.com">Link 2</a>
+          <a href="http://google.com">Link 3</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="image-container">
+          <p class="image-caption">Tools</p>
+          <img
+            class="menu-image"
+            src="images/scissors.png"
+            alt="knitting and needle"
+          />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Link 1</a>
+          <a href="http://google.com">Link 2</a>
+          <a href="http://google.com">Link 3</a>
+          <a href="http://google.com">Link 4</a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
