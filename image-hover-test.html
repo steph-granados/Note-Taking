@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-hover-test</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .image-1,
+        .image-2 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        .image-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: .3s ease;
+        }
+        
+        .container:hover .image-2 {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Fade in Overlay Icon</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container">
+    <img src="images/Classroom.png" alt="Classroom" class="image-1">
+    <img src="images/Classroom-color.png" alt="Classroom-color" class="image-2">
+</div>
+
+</body>
+</html>
