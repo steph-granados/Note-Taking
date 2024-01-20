@@ -21,15 +21,22 @@
         top: 0px;
         left: 0px;
         right: 0px;
-        height: 80px;
+        height: 203px;
         z-index: 100;
         background-color: rgba(255, 255, 255, 0.9);
+
+        font-family: "Crayonize", sans-serif;
+        font-size: 3vw;
+        font-style: normal;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        width: 100%;
       }
 
       .sidebar-left {
         background-color: rgba(255, 255, 255, 0.9);
         position: fixed;
-        width: 200px;
+        width: 250px;
         left: 0px;
         top: 0px;
         height: 100vh;
@@ -43,14 +50,14 @@
       .sidebar-right {
         background-color: rgba(255, 255, 255, 0.9);
         position: fixed;
-        width: 200px;
+        width: 250px;
         right: 0px;
         top: 0px;
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: end;
-        align-items: end;
+        align-items: start;
         padding: 1vw;
         z-index: 50;
       }
@@ -60,14 +67,14 @@
         top: 0px;
         left: 0px;
         right: 0px;
-        padding-top: 80px;
-        padding-left: 200px;
-        padding-right: 200px;
+        padding-top: 150px;
+        padding-left: 250px;
+        padding-right: 250px;
         min-height: 100vh;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
-        background-image: url("images/Classroom.png");
+        background-image: url("images/classroom.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -79,7 +86,7 @@
         grid-template-columns: 1fr 1fr;
         padding: 2vw;
         min-height: 350px;
-        border: 2px solid black;
+        /*border: 2px solid black;*/
       }
 
       .content > section:not(:last-child) {
@@ -108,42 +115,127 @@
         height: auto;
       }
 
+      img {
+        width: 1.5vw;
+        height: 1.5vw;
+        justify-content: center;
+      }
       .links {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: start;
+      }
+
+      /*Side bar link */
+      h1 {
+        display: flex;
+        justify-content: left;
+        padding-left: 0;
+        font-size: 1.5vw;
+        font-style: normal;
+        color: rgb(0, 0, 0);
+        font-family: "Crayonize", sans-serif;
+        width: 100%;
+        font-weight: bold;
+      }
+
+      /*header */
+      h2 {
+        font-size: 3vw;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        font-family: "Crayonize", sans-serif;
+      }
+      /*image caption (category) */
+      p {
+        display: flex;
+        justify-content: left;
+        padding-left: 0;
+        font-size: 1.5vw;
+        font-style: normal;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        font-family: "Crayonize", sans-serif;
+        width: 100%;
+      }
+
+      .links > a {
+        padding-left: 250px;
+        font-size: 1.5vw;
+        font-style: normal;
+        color: rgb(0, 0, 0);
+        font-family: "Crayonize", sans-serif;
+        width: 100%;
+      }
+
+      a:visited {
+        color: black;
       }
     </style>
   </head>
   <body>
-    <header>Hi Lefty</header>
+    <h2>
+      <header>Hi <br />Lefty :)</header>
+    </h2>
     <div class="sidebar-left">
-      <a href="index.html">Back to classroom </a>
+      <h1>
+        <a href="index.html"> Back to the classroom</a>
+        <img src="Images/apple.png" alt="apple" />
+      </h1>
     </div>
+
     <div class="sidebar-right">
-      <a href="about.html">About</a>
+      <h1>
+        <a href="about.html">About</a>
+      </h1>
+      <img src="Images/chalkboard.png" alt="apple" />
     </div>
+
     <main class="content">
       <section>
         <div class="image-container">
           <p class="image-caption">Famous lefties</p>
-          <img class="menu-image" src="images/glasses.png" alt="glasses" />
+          <img class="menu-image" src="Images/glasses.png" alt="glasses" />
         </div>
         <div class="links">
-          <a href="http://google.com">Link 1</a>
-          <a href="http://google.com">Link 2</a>
-          <a href="http://google.com">Link 3</a>
+          <a
+            href="https://www.rd.com/list/famous-left-handed-people/"
+            target="_blank"
+            >- 50 Famous People you didn't know were left handed</a
+          >
+          <a
+            href="https://blog.anythinglefthanded.co.uk/being-lh/famous/history/#historymisc"
+            >- More Left Handers!</a
+          >
         </div>
       </section>
 
       <section>
         <div class="image-container">
-          <p class="image-caption">Gadgets</p>
+          <p class="image-caption">01 Gadgets</p>
           <img
             class="menu-image"
-            src="images/computer.png"
+            src="Images/computer.png"
             alt="computer mouse"
+          />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Computer Mouse $</a>
+          <a href="http://google.com">Computer Mouse $$</a>
+          <a href="http://google.com">Computer Mouse $$$</a>
+          <a href="http://google.com">Watch Option 1</a>
+          <a href="http://google.com">Watch Option 2 </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="image-container">
+          <p class="image-caption">Hobbies & crafts</p>
+          <img
+            class="menu-image"
+            src="Images/knittandkneedle.png"
+            alt="knitting and needle"
           />
         </div>
         <div class="links">
@@ -155,10 +247,26 @@
 
       <section>
         <div class="image-container">
-          <p class="image-caption">Hobbies & crafts</p>
+          <p class="image-caption">Kitchen Tools</p>
           <img
             class="menu-image"
-            src="images/knittandkneedle.png"
+            src="Images/mug.png"
+            alt="knitting and needle"
+          />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Link 1</a>
+          <a href="http://google.com">Link 2</a>
+          <a href="http://google.com">Link 3</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="image-container">
+          <p class="image-caption">Left Handed History</p>
+          <img
+            class="menu-image"
+            src="Images/book.png"
             alt="knitting and needle"
           />
         </div>
@@ -172,7 +280,7 @@
       <section id="guitar">
         <div class="image-container">
           <p class="image-caption">Musical instruments</p>
-          <img class="menu-image" src="images/guitar.png" alt="guitar" />
+          <img class="menu-image" src="Images/guitar.png" alt="guitar" />
         </div>
         <div class="links">
           <a href="http://google.com">Link 1</a>
@@ -183,10 +291,44 @@
 
       <section>
         <div class="image-container">
+          <p class="image-caption">Everything Writing</p>
+          <img
+            class="menu-image"
+            src="Images/notebook-pen.png"
+            alt="knitting and needle"
+          />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Link 1</a>
+          <a href="http://google.com">Link 2</a>
+          <a href="http://google.com">Link 3</a>
+          <a href="http://google.com">Link 4</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="image-container">
           <p class="image-caption">Tools</p>
           <img
             class="menu-image"
-            src="images/scissors.png"
+            src="Images/scissors.png"
+            alt="knitting and needle"
+          />
+        </div>
+        <div class="links">
+          <a href="http://google.com">Link 1</a>
+          <a href="http://google.com">Link 2</a>
+          <a href="http://google.com">Link 3</a>
+          <a href="http://google.com">Link 4</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="image-container">
+          <p class="image-caption">Miscellaneous</p>
+          <img
+            class="menu-image"
+            src="Images/backpack.png"
             alt="knitting and needle"
           />
         </div>
