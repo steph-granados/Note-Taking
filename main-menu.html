@@ -21,7 +21,7 @@
         top: 0px;
         left: 0px;
         right: 0px;
-        height: 203px;
+        height: 198px;
         z-index: 100;
         background-color: rgba(255, 255, 255, 0.9);
 
@@ -36,7 +36,7 @@
       .sidebar-left {
         background-color: rgba(255, 255, 255, 0.9);
         position: fixed;
-        width: 250px;
+        width: 350px;
         left: 0px;
         top: 0px;
         height: 100vh;
@@ -44,13 +44,14 @@
         flex-direction: column;
         justify-content: end;
         padding: 1vw;
+        padding-bottom: 25px;
         z-index: 50;
       }
 
       .sidebar-right {
         background-color: rgba(255, 255, 255, 0.9);
         position: fixed;
-        width: 250px;
+        width: 350px;
         right: 0px;
         top: 0px;
         height: 100vh;
@@ -59,8 +60,24 @@
         justify-content: end;
         align-items: start;
         padding: 1vw;
+        padding-bottom: 25px;
         z-index: 50;
       }
+
+      .sidebar-left h1,
+      .sidebar-right h1 {
+        display: flex;
+        align-items: center;
+      }
+
+      .sidebar-left a,
+      .sidebar-right a {
+        margin-right: 16px;
+      }
+
+      /*.sidebar-right img {
+        border: 1px solid red;
+      }*/
 
       .content {
         position: absolute;
@@ -68,8 +85,8 @@
         left: 0px;
         right: 0px;
         padding-top: 150px;
-        padding-left: 250px;
-        padding-right: 250px;
+        padding-left: 350px;
+        padding-right: 350px;
         min-height: 100vh;
         overflow-y: auto;
         display: flex;
@@ -147,6 +164,23 @@
         text-align: left;
         font-family: "Crayonize", sans-serif;
       }
+      h3 {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        font-size: 1vw;
+        font-style: normal;
+        font-weight: lighter;
+        color: rgb(0, 0, 0);
+        font-family: "Crayonize", sans-serif;
+        width: 100%;
+      }
+
+      footer {
+        background-color: white;
+        height: 50px;
+      }
+
       /*image caption (category) */
       p {
         display: flex;
@@ -188,8 +222,8 @@
     <div class="sidebar-right">
       <h1>
         <a href="about.html">About</a>
+        <img src="Images/chalkboard.png" alt="apple" />
       </h1>
-      <img src="Images/chalkboard.png" alt="apple" />
     </div>
 
     <main class="content">
@@ -202,35 +236,56 @@
           <a
             href="https://www.rd.com/list/famous-left-handed-people/"
             target="_blank"
-            >- 50 Famous People you didn't know were left handed</a
+            >50 Famous People you didn't know were left handed</a
           >
           <a
             href="https://blog.anythinglefthanded.co.uk/being-lh/famous/history/#historymisc"
-            >- More Left Handers!</a
+            target="_blank"
+            >More Left Handers!</a
           >
         </div>
       </section>
 
       <section>
         <div class="image-container">
-          <p class="image-caption">01 Gadgets</p>
+          <p class="image-caption">Gadgets</p>
           <img
             class="menu-image"
             src="Images/computer.png"
             alt="computer mouse"
           />
         </div>
-        <div class="links">
-          <a href="http://google.com">Computer Mouse $</a>
-          <a href="http://google.com">Computer Mouse $$</a>
-          <a href="http://google.com">Computer Mouse $$$</a>
-          <a href="http://google.com">Watch Option 1</a>
-          <a href="http://google.com">Watch Option 2 </a>
+        <div id="computer" class="links">
+          <a
+            href="https://perixx.com/products/perimice-719l-left-handed-wireless-ergonomic-mouse-silent-click-small"
+            target="_blank"
+            >Computer Mouse $</a
+          >
+          <a
+            href="https://www.logitech.com/en-us/products/mice/lift-vertical-ergonomic-mouse.910-006467.html"
+            target="_blank"
+            >Computer Mouse $$$</a
+          >
+          <a
+            href="https://www.gq.com/story/best-left-handed-watches"
+            target="_blank"
+            >Watch Option 1</a
+          >
+          <a
+            href="https://nordgreen.com/collections/left-handed-watch"
+            target="_blank"
+            >Watch Option 2
+          </a>
+          <a
+            href="https://www.amazon.com/Left-Handed-ProtoArc-Ultra-Thin-Rechargeable-Multi-Device/dp/B0B5Z59QT5/ref=sr_1_2_sspa?crid=2FN9M3L7SJIR7&keywords=left+handed+keyboard+wireless&qid=1705856286&s=electronics&sprefix=left+handed+keyboard+wireless%2Celectronics%2C70&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+            target="_blank"
+            >Keyboard
+          </a>
         </div>
       </section>
 
       <section>
-        <div class="image-container">
+        <div id="knittandkneedle" class="image-container">
           <p class="image-caption">Hobbies & crafts</p>
           <img
             class="menu-image"
@@ -239,14 +294,16 @@
           />
         </div>
         <div class="links">
-          <a href="http://google.com">Link 1</a>
-          <a href="http://google.com">Link 2</a>
-          <a href="http://google.com">Link 3</a>
+          <a
+            href="https://blog.nobleknits.com/blog/left-handed-knitting"
+            target="_blank"
+            >Knitting</a
+          >
         </div>
       </section>
 
       <section>
-        <div class="image-container">
+        <div id="mug" class="image-container">
           <p class="image-caption">Kitchen Tools</p>
           <img
             class="menu-image"
@@ -255,14 +312,26 @@
           />
         </div>
         <div class="links">
-          <a href="http://google.com">Link 1</a>
-          <a href="http://google.com">Link 2</a>
-          <a href="http://google.com">Link 3</a>
+          <a
+            href="https://www.amazon.com/dp/B00LZY2CUQ?tag=foodandwine-onsite-prod-20&linkCode=ogi&th=1&psc=1&ascsubtag=7570762%7Cnaee3a926f30c432dbf4585603e00e4e823%7CB00LZY2CUQ%7C1705275662835%7C"
+            target="_blank"
+            >Measuring Cup</a
+          >
+          <a
+            href="https://www.amazon.com/dp/B00RDPZFIM?tag=foodandwine-onsite-prod-20&linkCode=ogi&th=1&psc=1&ascsubtag=7570762%7Cnaee3a926f30c432dbf4585603e00e4e823%7CB00RDPZFIM%7C1705275733625%7C"
+            target="_blank"
+            >Can Opener</a
+          >
+          <a
+            href="https://www.amazon.com/dp/B00JVEL1VS?tag=foodandwine-onsite-prod-20&linkCode=ogi&th=1&psc=1&ascsubtag=7570762%7Cnaee3a926f30c432dbf4585603e00e4e823%7CB00JVEL1VS%7C1705275749242%7C"
+            target="_blank"
+            >Bamboo Utensils</a
+          >
         </div>
       </section>
 
       <section>
-        <div class="image-container">
+        <div id="book" class="image-container">
           <p class="image-caption">Left Handed History</p>
           <img
             class="menu-image"
@@ -271,43 +340,43 @@
           />
         </div>
         <div class="links">
-          <a href="http://google.com">Link 1</a>
-          <a href="http://google.com">Link 2</a>
-          <a href="http://google.com">Link 3</a>
+          <a href="https://time.com/3978951/lefties-history/" target="_blank"
+            >History</a
+          >
+          <a
+            href="https://www.scientificamerican.com/article/what-causes-some-people-t/"
+            target="_blank"
+            >Psychology</a
+          >
         </div>
       </section>
 
-      <section id="guitar">
-        <div class="image-container">
+      <section>
+        <div id="guitar" class="image-container">
           <p class="image-caption">Musical instruments</p>
           <img class="menu-image" src="Images/guitar.png" alt="guitar" />
         </div>
         <div class="links">
-          <a href="http://google.com">Link 1</a>
-          <a href="http://google.com">Link 2</a>
-          <a href="http://google.com">Link 3</a>
+          <a
+            href="https://www.guitarcenter.com/Left-Handed-Electric-Guitars.gc"
+            target="_blank"
+            >Guitar</a
+          >
+          <a
+            href="https://www.elderly.com/products/deering-vega-little-wonder-banjo-lh-61u-217998?variant=42390075932863"
+            target="_blank"
+            >Banjo</a
+          >
+          <a
+            href="https://www.elderly.com/products/guild-starfire-1-lefthanded-bass-cherry-red?variant=40769089700031"
+            target="_blank"
+            >Bass</a
+          >
         </div>
       </section>
 
       <section>
-        <div class="image-container">
-          <p class="image-caption">Everything Writing</p>
-          <img
-            class="menu-image"
-            src="Images/notebook-pen.png"
-            alt="knitting and needle"
-          />
-        </div>
-        <div class="links">
-          <a href="http://google.com">Link 1</a>
-          <a href="http://google.com">Link 2</a>
-          <a href="http://google.com">Link 3</a>
-          <a href="http://google.com">Link 4</a>
-        </div>
-      </section>
-
-      <section>
-        <div class="image-container">
+        <div id="scissors" class="image-container">
           <p class="image-caption">Tools</p>
           <img
             class="menu-image"
@@ -316,15 +385,44 @@
           />
         </div>
         <div class="links">
-          <a href="http://google.com">Link 1</a>
-          <a href="http://google.com">Link 2</a>
-          <a href="http://google.com">Link 3</a>
-          <a href="http://google.com">Link 4</a>
+          <a
+            href="https://www.amazon.com/DIGNITY-Scissors-Stainless-Super-sharp-Professional/dp/B0CDQHK4PT/ref=sr_1_5?crid=2ZRN4143YF8L5&keywords=left+handed+scissors&qid=1705272998&refinements=p_72%3A1248945011&rnid=1248943011&s=office-products&sprefix=left+hand%2Coffice-products%2C75&sr=1-5"
+            target="_blank"
+            >Scissors</a
+          >
+          <a
+            href="https://www.boschtools.com/us/en/boschtools-ocs/circular-saws-cs5-29193-p/"
+            target="_blank"
+            >Circular Blade</a
+          >
+          <a
+            href="https://www.etsy.com/listing/1186764850/modern-style-left-handed-1230cm-metal?gpla=1&gao=1&"
+            target="_blank"
+            >Ruler</a
+          >
         </div>
       </section>
 
       <section>
-        <div class="image-container">
+        <div id="notebook-pen" class="image-container">
+          <p class="image-caption">Everything Writing</p>
+          <img
+            class="menu-image"
+            src="Images/notebook-pen.png"
+            alt="knitting and needle"
+          />
+        </div>
+        <div class="links">
+          <a
+            href="https://www.amazon.com/Maped-Visio-Handed-Black-224327/dp/B00819BEBG"
+            target="_blank"
+            >Pens</a
+          >
+        </div>
+      </section>
+
+      <section>
+        <div id="backpack" class="image-container">
           <p class="image-caption">Miscellaneous</p>
           <img
             class="menu-image"
@@ -333,12 +431,17 @@
           />
         </div>
         <div class="links">
-          <a href="http://google.com">Link 1</a>
-          <a href="http://google.com">Link 2</a>
-          <a href="http://google.com">Link 3</a>
-          <a href="http://google.com">Link 4</a>
+          <a
+            href="https://www.amazon.com/Compartment-School-Cafeteria-Tray-Handed/dp/B0C4FZSML5/ref=sr_1_1_sspa?crid=3CP6DZDGKV4YZ&keywords=left+handed&qid=1705273802&s=industrial&sprefix=left+handed%2Cindustrial%2C73&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+            target="_blank"
+            >School Cafeteria Tray</a
+          >
         </div>
       </section>
+
+      <footer>
+        <h3>&copy Stephanie Granados 2024</h3>
+      </footer>
     </main>
   </body>
 </html>
